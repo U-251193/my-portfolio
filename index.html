@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>はじめてのHTML</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Portfolio</title>
+  <meta name="description" content="シンプルなポートフォリオサイトです。" />
+  <!-- PWA/OG（必要なら後で画像差し替え） -->
+  <meta property="og:title" content="My Portfolio" />
+  <meta property="og:description" content="シンプルなポートフォリオサイトです。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og.jpg" />
+  <link rel="icon" href="assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <h1>こんにちは！</h1>
-    <p>これはVS Codeで作ったHTMLファイルです。</p>
+  <header class="site-header">
+    <a class="brand" href="#home">My Portfolio</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="site-nav" aria-label="メインメニュー">
+      <a href="#about">About</a>
+      <a href="#Sample-apps">Sample Apps</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">こんにちは、Mami です。</h1>
+      <p>Webエンジニア／デベロッパー。PHP / JS / SQL が得意です。</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">作品を見る</a>
+        <a class="btn ghost" href="#contact">連絡する</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        自己紹介を1〜3行で。強み、使える技術、興味ある領域など。
+      </p>
+      <ul class="tags">
+        <li>PHP</li><li>JavaScript</li><li>MySQL</li><li>jQuery</li><li>Bootstrap</li>
+      </ul>
+    </section>
+
+    <section id="Sample-apps" class="section">
+      <h2>Sample Apps</h2>
+      <div class="grid">
+        <!-- カード：必要数だけ複製 -->
+        <article class="card">
+          <img src="assets/img/sample1.jpg" alt="プロジェクト1のサムネイル" />
+          <div class="card-body">
+            <h3>LINE資産管理フォーム</h3>
+            <p>画像アップロード／既存URL取込に対応した管理フォーム。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/img/sample2.jpg" alt="プロジェクト2のサムネイル" />
+          <div class="card-body">
+            <h3>ダッシュボード集計</h3>
+            <p>dashboardListを用いて動的に指標を切替表示。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><a href="mailto:you@example.com">umi.931125@gmail.com</a></li>
+        <li><a href="https://github.com/U-251193" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Mami </small>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
